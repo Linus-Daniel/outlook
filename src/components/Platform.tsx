@@ -45,7 +45,7 @@ const platforms: PlatformData[] = [
 
 const Platform: React.FC = () => {
   return (
-    <section className="min-h-screen bg-[#fff9f5] py-16 px-6 text-center">
+    <section id='download' className="min-h-screen bg-[#fff9f5] py-16 px-6 text-center">
       <p className="uppercase text-sm text-gray-500 tracking-wide">Download the app</p>
       <h2 className="text-3xl sm:text-4xl font-bold my-4">Outlook wherever you are</h2>
 

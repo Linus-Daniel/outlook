@@ -53,7 +53,7 @@ const Updates = () => {
   const filteredCards = CARDS.filter((card) => card.tab === activeTab);
 
   return (
-    <main className="bg-contain bg-left-bottom bg-no-repeat bg-[#fff9f3]"
+    <main id="news" className="bg-contain bg-left-bottom bg-no-repeat bg-[#fff9f3]"
     style={{
         backgroundImage: "url('/images/bg2.avif')", // Replace with your actual background
     }}>

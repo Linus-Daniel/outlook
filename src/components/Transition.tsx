@@ -1,78 +1,73 @@
-import Image from "next/image";
-import React from "react";
+import Image from 'next/image';
+import React from 'react';
+import { FaChevronRight } from 'react-icons/fa';
 
-const HotmailInfo = () => {
+const HotmailComponent = () => {
   return (
-    <main className="">
-      <div className="bg-[#fff9f3] min-h-screen py-10 px-4 md:px-20 font-sans">
-        {/* Top Feature Section */}
-        <div className="grid lg:grid-cols-2 gap-6 bg-white rounded-2xl shadow-md overflow-hidden mb-10">
-          {/* Text Section */}
-          <div className="p-8 flex flex-col justify-center">
-            <p className="text-xs text-gray-500 mb-2">Get started</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3 leading-tight">
-              What happened to <br /> Hotmail?
-            </h2>
-            <p className="text-sm text-gray-600 mb-5 max-w-md">
-              Outlook.com replaced Hotmail years ago, but your Hotmail account
-              will continue to work across Outlook apps.
-            </p>
-            <button className="bg-gray-900 text-white px-5 py-2 rounded-md text-sm w-fit hover:bg-gray-800 transition">
-              Sign in
-            </button>
-          </div>
-
-          {/* Image Section */}
-          <div className="h-64 md:h-auto w-full">
-            <Image
-              src="/images/transition.avif" // Replace with actual image
-              width={343}
-              height={282}
-              alt="Woman using tablet"
-              className=" object-fit object-center"
-            />
-          </div>
+    <div className="bg-[#fef9f3] min-h-screen px-4 py-10">
+      <div className="max-w-6xl mx-auto bg-white p-3 rounded-xl shadow-gray-400 shadow-md grid gap-6 md:grid-cols-2">
+        {/* Left Text Section */}
+        <div className=" p-6 rounded-xl flex flex-col justify-center">
+          <p className="text-xs text-gray-500 mb-2">Get started</p>
+          <h1 className="text-3xl text-[#001e41] font-bold mb-4">What happened to Hotmail?</h1>
+          <p className="text-sm text-gray-600 mb-6">
+            Outlook.com replaced Hotmail years ago, but your Hotmail account will continue to work across Outlook apps.
+          </p>
+          <button className="bg-[#001e41] text-white px-4 py-2 rounded-md md:w-fit">Sign in</button>
         </div>
 
-        {/* Bottom Action Cards */}
-        <div className="grid md:grid-cols-2 gap-6">
-          {/* Create Account Card */}
-          <div className="bg-white rounded-2xl shadow-md p-6 flex items-start space-x-4">
-            <div className="text-xl text-gray-700">👤</div>
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-1">
-                Create free account
-              </h3>
-              <p className="text-sm text-gray-600 mb-3">
-                Don’t have an account? Get started with a free Outlook.com email
-                today.
-              </p>
-              <button className="bg-gray-900 text-white px-4 py-2 rounded-md text-sm hover:bg-gray-800 transition">
-                Create account
-              </button>
-            </div>
-          </div>
-
-          {/* Try Premium Card */}
-          <div className="bg-white rounded-2xl shadow-md p-6 flex items-start space-x-4">
-            <div className="text-xl text-gray-700">💎</div>
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-1">
-                Try premium
-              </h3>
-              <p className="text-sm text-gray-600 mb-3">
-                Get the best Outlook experience with a Microsoft 365
-                subscription.
-              </p>
-              <button className="text-sm text-gray-900 font-medium hover:underline transition">
-                Explore plans
-              </button>
-            </div>
-          </div>
+        {/* Right Image Section */}
+        <div className="rounded-xl overflow-hidden">
+          <Image
+            src="/images/transition.avif"
+            alt="Person using tablet"
+            width={434}
+            height={282}
+            className="w-full h-full object-cover"
+          />
         </div>
       </div>
-    </main>
+
+      {/* Bottom Cards */}
+      <div className="max-w-6xl mx-auto grid gap-6 mt-10 md:grid-cols-2">
+        {/* Create Account Card */}
+        <div className="bg-white p-6 rounded-xl shadow-md">
+          <div className="flex items-center mb-4">
+          <div className=" text-white rounded-full p-2 mr-3">
+             <Image src={"/images/person.svg"} alt='diamond' width={30} height={30} />
+            </div>
+            <h2 className="text-lg text-[#001e41] font-semibold">Create free account</h2>
+          </div>
+          <p className="text-sm text-gray-600 mb-4">
+            Don’t have an account? Get started with a free Outlook.com email today.
+          </p>
+         <div className="mt-10">
+                 <button className="flex items-center gap-2 text-sm font-mediumpx-4 text-[#0f172a] py-2 rounded-full hover:bg-[#1e293b] transition">
+                   <span className="text-lg  text-white p-2 rounded-lg bg-[#0f172a] "> <FaChevronRight /></span> Create account
+                 </button>
+               </div>
+        </div>
+
+        {/* Try Premium Card */}
+        <div className="bg-white p-6 rounded-xl shadow-md">
+          <div className="flex items-center mb-4">
+            <div className=" text-white rounded-full p-2 mr-3">
+             <Image src={"/images/diamond.svg"} alt='diamond' width={30} height={30} />
+            </div>
+            <h2 className="text-lg text-[#001e41] font-semibold">Try premium</h2>
+          </div>
+          <p className="text-sm text-gray-600 mb-4">
+            Get the best Outlook experience with a Microsoft 365 subscription.
+          </p>
+          <div className="mt-10">
+                  <button className="flex items-center gap-2 text-sm font-mediumpx-4 text-[#0f172a] py-2 rounded-full hover:bg-[#1e293b] transition">
+                    <span className="text-lg  text-white p-2 rounded-lg bg-[#0f172a] "> <FaChevronRight /></span> Explore plans
+                  </button>
+                </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
-export default HotmailInfo;
+export default HotmailComponent;

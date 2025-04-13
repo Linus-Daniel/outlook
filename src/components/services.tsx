@@ -42,7 +42,7 @@ interface Apps {
 }
 
 const AppCard = ({ logo, company, name, description, rating, reviews }:Apps) => (
-    <div className="w-[350px] h-[250px] bg-white rounded-3xl shadow-md border-gray-300 shadow-gray-200 border p-4 flex flex-col justify-between">
+    <div id="apps" className="w-[350px] h-[250px] bg-white rounded-3xl shadow-md border-gray-300 shadow-gray-200 border p-4 flex flex-col justify-between">
     <div>
       <div className="flex items-center gap-3  mb-5">
         <div className="border-[2px] h-16 w-16  border-solid p-3 border-[#e6f2fb] rounded-lg ">

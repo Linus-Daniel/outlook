@@ -23,7 +23,7 @@ const Faq = () => {
   const collapseAll = () => setOpenIndexes([]);
 
   return (
-    <div className="bg-[#fef9f5] min-h-screen px-4 md:px-20 py-16">
+    <div id="faq" className="bg-[#fef9f5] min-h-screen px-4 md:px-20 py-16">
       <div className="max-w-5xl mx-auto">
         {/* Heading and Controls */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-10">

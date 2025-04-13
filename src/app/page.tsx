@@ -22,16 +22,26 @@ const App = () => {
       <motion.div
 
             >
+              <section id="overview">
+
               <Header />
               <Hero />
-              <TabNav />
               <Promo />
-              <Action />
+              </section>
+              <TabNav />
+                 <Action />
+
+        
               <Platform />
+
+
               <Apps />
+            
+
               <Updates />
-              <HotmailTransition />
+             
               <Faq />
+              <HotmailTransition />
              <Footer />
       </motion.div>
     </main>
